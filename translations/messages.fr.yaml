@@ -1,0 +1,183 @@
+#########################################
+## MENUS ################################
+# MENU:MAIN
+menu:
+  about:
+    label: "À propos"
+  product:
+    label: "Produit"
+  team:
+    label: "L'équipe"
+  organization:
+    label: "Organisation"
+  ico:
+    label: "ICO"
+# MENU:FOOTER
+menu_footer:
+  top:
+    about:
+      label: "À propos"
+    product:
+      label: "Produit"
+    team:
+      label: "Organisation"
+  bottom:
+    terms_service:
+      label: "CGU"
+    privacy_policy:
+      label: "Confidentialité"
+    contact:
+      label: "Contact"
+## MENUS ################################
+#########################################
+
+
+#########################################
+## PAGES ################################
+page:
+  ########################
+  # PAGE:ABOUT ###########
+  about:
+    # ABOUT:META/SEO
+    meta:
+      title: "À propos"
+      description: ""
+    # ABOUT:INTRO
+    intro:
+      title:  "Free Trade"
+      text:   "Notre mission est de globaliser les marchés de l'automobile, de fournir aux gens la liberté et la sécurité dans les transactions."
+    # ABOUT:WHITEPAPER
+    whitepaper:
+      title:  "Kargain World est"
+      text:   "Un réseau social pour les acteurs du marché des véhicules couplé à une base de données de véhicules en accès libre dont certaines données clés sont stockées et garanties par une technologie de blockchain publique."
+      btn:
+        label: "Lire le Whitepaper"
+    # ABOUT:BLOCKCHAIN
+    blockchain:
+      title: "La plate-forme automobile mondiale basée sur la blockchain"
+      block_1:
+        text: "La plateforme qui permettra de moraliser et d'internationaliser
+        le marché automobile, de suivre, de sécuriser les échanges
+        et d'augmenter la liquidité sur celui-ci."
+        list:
+          item_1:
+            text: "Identité numérique sécurisée"
+          item_2:
+            text: "Suivi de voiture"
+          item_3:
+            text: "Réputation numérique"
+      block_2:
+        text: "Token (NFT)<br><br>Chaque véhicule que les utilisateurs choisiront
+        de suivre «on-chain» aura son jeton unique (NFT Non-Fugible Token,
+        conforme à la norme ERC-721). Les NFT ont un fichier JSON avec
+        des métadonnées attachées qui peuvent être
+        mises à jour et peuvent avoir différents
+        attributs."
+        btn:
+          label: "En savoir plus"
+  ########################
+  # PAGE:TEAM ############
+  team:
+    # TEAM:META/SEO
+    meta:
+      title: "L'équipe"
+      description: ""
+    # TEAM:INTRO
+    intro:
+      title:  "Découvrez l'équipe"
+    # TEAM:LISTS
+    list_team:
+      empty: "Aucun membre à afficher, veuillez définir une liste de membres."
+    list_partners:
+      title: "Nos partenaires"
+      empty: "Aucun partenaire à afficher, veuillez définir une liste de partenaires."
+
+  ########################
+  # PAGE:PRODUCT #########
+  product:
+    # PRODUCT:META/SEO
+    meta:
+      title: "Produit"
+      description: ""
+    # PRODUCT:WEBSITE
+    website:
+      section_title: "Web Marketplace"
+      # title: "Kargain.com" /*, <br>le projet soeur de <br>Karspace" */
+      title: "Kargain.com"
+      text: "Application en ligne avec une base de données qui permettra à quiconque de poster et de répondre aux offres de vente de véhicules."
+    # PRODUCT:MOBILE_APP
+    mobile_app:
+      section_title: "DApp Mobile"
+      title: "Karspace"
+      text: "Application décentralisée adossée à une plateforme de blockchain axée sur les Smart Contracts."
+    # PRODUCT:FEATURES
+    features:
+      title: "Caractéristiques"
+      empty: "Aucune caractéristique à afficher, veuillez définir une liste de caractéristiques."
+    # PRODUCT:MILESTONES
+    milestones:
+      title: "Milestones"
+      empty: "Aucune date à afficher, veuillez définir une liste de date (milestones)."
+  ########################
+  # PAGE:ICO #############
+  ico:
+    # ICO:META/SEO
+    meta:
+      title: "ICO"
+      description: ""
+    # ICO:GLOBALS
+    message: "Nous vous informerons lors du lancement."
+  ########################
+  # PAGE:PRIVACY #########
+  privacy_policy:
+    # PRIVACY:META/SEO
+    meta:
+      title: "Politique de confidentialité"
+      description: ""
+    # PRIVACY:TEXTS
+  ########################
+  # PAGE:TERMS ###########
+  terms_service:
+    # TERMS:META/SEO
+    meta:
+      title: "Conditions d'utilisation"
+      description: ""
+    # TERMS:TEXTS
+    # intro:
+## PAGES ################################
+#########################################
+
+
+#########################################
+## SECTIONS #############################
+section:
+  newsletter:
+    title: "Vous voulez accéder aux news de Kargain.World&nbsp;?"
+    input:
+      label: "Entrez votre adresse email"
+    btn:
+      label: "S'inscrire"
+## SECTIONS #############################
+#########################################
+
+
+#########################################
+## NEWSLETTER ###########################
+newsletter_subscribe:
+  messages:
+    nok:                "Un problème est survenu..."
+    ok:                 "Inscription à la newsletter de Kargain World effectuée avec succès."
+    already_registered: "Vous êtes déjà inscrit à la newsletter de Kargain World."
+## NEWSLETTER ###########################
+#########################################
+
+
+#########################################
+## AUTHOR ###############################
+author:
+  made_with:  "Conçu avec du"
+  and_some:   "et un peu de"
+  coffee:     "thé ou café"
+  by:         "par"
+## AUTHOR ###############################
+#########################################

@@ -1,0 +1,51 @@
+{% if text is defined and img is defined %}
+{% set has_title = (title is defined and title is not empty) %}
+<div class="app-section app-section--text-and-image{% if slug is defined %} app-section--{{ slug }}{% endif %}{% if section_class is defined %} {{ section_class }}{% endif %} container">
+  <div class="row row-title">
+    <div class="col-12 col-md-6">
+      {% if has_title and title_in_panel is not defined %}
+        <h3 class="-title display-6 no-border">{{ title|raw }}</h3>
+      {% endif %}
+    </div>
+  </div>
+  <div class="row row-content align-items-{% if valign is defined %}{{ valign }}{% else %}center{% endif %}">
+    <div class="col-12 col-md-6 col-text">
+      <div class="panel panel--classic">
+        {% if has_title and (title_in_panel is defined and title_in_panel == true) %}
+          <h3 class="-title h5">{{ title|raw }}</h3>
+        {% endif %}
+
+        <hr class="mini mt-0 mb-4 ml-0">
+
+        <div class="-text">{{ text|raw }}</div>
+        {% if list is defined and list is not empty %}
+          <ul class="-list text-secondary">
+            {% for item in list %}
+              <li>
+                {% if item.icon is defined %}
+                  <span class="-item-icon icon-{{ item.icon }}"></span>
+                {% endif %}
+                <span class="-item-text">{{ item.text }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if actions is defined and actions is not empty %}
+        <div class="-actions">
+          {% for action in actions %}
+            <a class="btn btn-xl btn-pill btn-gradient-primary btn-big-icon btn-big-icon--right{% if loop.last == false %} mb-2{% endif %}"
+              href="{{ action.link }}"{% if action.target is defined %} target="{{ action.target }}"{% endif %} >
+              {{ action.label }}
+              <span class="icon icon-arrow-right"></span>
+            </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-image text-center mt-5 mt-md-0{% if img.position == 'left' %} order-md-first{% endif %}">
+      <img src="{{ img.source }}" class="img-fluid">
+    </div>
+  </div>
+</div>
+{% endif %}

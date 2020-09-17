@@ -1,0 +1,162 @@
+parameters:
+    google_analytics_key: 'UA-163559523-1'
+    contact_email: 'contact@kargain.world'
+    social_networks:
+      ##  facebook:
+      ##    icon: 'facebook'
+      ##    url:  '#facebook'
+        twitter:
+          icon: 'twitter'
+          url:  'https://twitter.com/KargainWorld'
+        linkedin:
+          icon: 'linkedin'
+          url:  'https://www.linkedin.com/showcase/kargain-world/'
+      ##   medium:
+      ##    icon: 'medium'
+      ##    url:  '#medium'
+      ##  fling:
+      ##    icon: 'plane'
+      ##    url:  '#fling'
+        reddit:
+          icon: 'reddit'
+          url:  '#reddit'
+    team:
+        member_1:
+            lastname:   "Daniil"
+            firstname:  "Gorbatenko"
+            avatar:     "/build/images/avatars/daniil-gorbatenko.png"
+            job:
+              en: "CO-Founder"
+              fr: "CO-Fondateur"
+        # member_2:
+        #     lastname:   "Georgy"
+        #     firstname:  "Usachev"
+        #     avatar:     "/build/images/avatars/georgy-usachev.png"
+        #     job:
+        #       en: "Founder"
+        #       fr: "Fondateur"
+        member_3:
+            lastname:   "Nicolas"
+            firstname:  "Richard"
+            avatar:     "/build/images/avatars/nicolas-richard.png"
+            job:
+              en: "CO-Founder"
+              fr: "CO-Fondateur"
+    ## member_1:
+    ##     lastname:   "Martha"
+    ##     firstname:  "Kane"
+    ##     avatar:     "/build/images/avatars/martha-kane.png"
+    ##     job:
+    ##       en: "Founder (CEO)"
+    ##       fr: "Fondatrice (CEO)"
+    ## member_2:
+    ##     lastname:   "Bruce"
+    ##     firstname:  "Wayne"
+    ##     avatar:     "/build/images/avatars/bruce-wayne.png"
+    ##     job:
+    ##       en: "Co-Founder (CEO)"
+    ##       fr: "Co-Fondateur (CEO)"
+    ## member_3:
+    ##     lastname:   "Doe"
+    ##     firstname:  "John"
+    ##     avatar:     "/build/images/avatars/john-doe.png"
+    ##     job:
+    ##       en: "Chief Technology Officer (CTO)"
+    ##       fr: "Directeur de la technologie (CTO)"
+        member_4:
+            lastname:   "Nicolas"
+            firstname:  "Giraudo"
+            avatar:     "/build/images/avatars/nicolas-giraudo.png"
+            job:
+              en: "Developer"
+              fr: "Développeur"
+        ## member_4:
+        ##    lastname:   "Roth"
+        ##    firstname:  "Raven"
+        ##    avatar:     "/build/images/avatars/raven-roth.png"
+        ##    job:
+        ##      en: "Developer"
+        ##      fr: "Développeuse"
+        ##member_5:
+        ##    lastname:   "Morales"
+        ##    firstname:  "Miles"
+        ##    avatar:     "/build/images/avatars/miles-morales.png"
+        ##    job:
+        ##      en: "Developer"
+        ##      fr: "Développeur"
+        ##member_6:
+        ##    lastname:   "Portgas D."
+        ##    firstname:  "Ace"
+        ##    avatar:     "/build/images/avatars/a[s]ce.png"
+        ##    job:
+        ##      en: "Community Manager"
+        ##      fr: "Community Manager"
+    partners:
+        ray_connection:
+            name: "raY Connection"
+            logo: "/build/images/partners/ray-connection.png"
+        studio_way:
+            name: "Studio WAY"
+            logo: "/build/images/partners/studio-way.png"
+        litti_aurelien:
+            name: "Litti Aurélien"
+            logo: "/build/images/partners/litti-aurelien.png"
+    features:
+        item_1:
+            icon:   "user"
+            title:
+              en: "Self-sovereign Identity"
+              fr: "Identité auto-souveraine"
+            text:
+              en: "Own and protect your data."
+              fr: "Posséder et protéger vos données."
+        item_2:
+            icon:   "messages"
+            title:
+              en: "Encrypted Messaging"
+              fr: "Messagerie cryptée"
+            text:
+              en: "Send secure, private messages to other buyers and sellers on the platform."
+              fr: "Envoyez des messages privés et sécurisés à d'autres acheteurs et vendeurs sur la plateforme."
+        item_3:
+            icon:   "file-exchange"
+            title:
+              en: "Reputation System"
+              fr: "Système de réputation"
+            text:
+              en: "Give ratings and leave reviews for your transactions."
+              fr: "Donnez des notes et laissez des avis pour vos transactions."
+        item_4:
+            icon:   "cubic"
+            title:
+              en: "Blockchain-Powered Transactions"
+              fr: "Transactions Blockchain-Powerred"
+            text:
+              en: "Funds are escrowed on our marketplace smart contract."
+              fr: "Les fonds sont conservés et sécurisé par le smart contrat."
+    milestones:
+        item_1:
+            date:
+              en: "July 2020"
+              fr: "Juillet 2020"
+            text:
+              en: "Development Alpha Karspace."
+              fr: "Développement Alpha Karspace."
+        item_2:
+            date:
+              en: "June 2020"
+              fr: "Juin 2020"
+            text:
+              en: "Kargain web application launch."
+              fr: "Lancement application web Kargain."
+        item_3:
+            is_old: true
+            date:
+              en: "April 2020"
+              fr: "Avril 2019"
+            text:
+              en: "Project launch."
+              fr: "Lancement du projet."
+
+# services:
+#     # ... some services

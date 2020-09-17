@@ -1,0 +1,57 @@
+<div class="app-footer my-4">
+  <div class="container">
+    <div class="row text-center align-items-center">
+      <div class="col-12 col-md-6 text-md-left">
+        &copy;&nbsp;Kargain World {{ "now"|date('Y') }}
+      </div>
+      <div class="col-12 col-md-6 text-md-right">
+        <nav class="navbar navbar-light p-0">
+          <ul class="navbar-nav d-block w-100 ml-md-auto">
+            {% for menu_slug in [ 'about', 'product', 'team' ] %}
+              <li class="nav-item d-inline-block">
+                <a class="nav-link px-2 py-1 ml-md-2 ml-lg-4 ml-xl-5" href="{{ path(menu_slug) }}">
+                  {{ ('menu_footer.top.' ~ menu_slug ~ '.label')|trans }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <hr class="my-lg-4">
+
+    <div class="row text-center align-items-center py-2">
+      <div class="col-12 col-md-6 text-md-left">
+        <nav class="navbar navbar-light p-0">
+          <ul class="navbar-nav d-block w-100 ml-md-auto">
+            {% for menu_bis_slug in [ 'terms_service', 'privacy_policy', 'contact' ] %}
+              {% if menu_bis_slug == 'contact' %}
+                {% set url = 'mailto:' ~ contact_email %}
+              {% else %}
+                {% set url = path(menu_bis_slug) %}
+              {% endif %}
+              <li class="nav-item d-inline-block">
+                <a class="nav-link px-2 py-0{% if loop.last == false %} mr-md-2 pr-md-3 border-dark border-right{% endif %}"
+                    href="{{ url }}"  style="line-height: 1">
+                  {{ ('menu_footer.bottom.' ~ menu_bis_slug ~ '.label')|trans }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="col-12 col-md-6 text-md-right mt-2 mt-md-0">
+        <ul class="list-inline mb-0">
+          {% for network in social_networks %}
+            <li class="d-inline-block">
+              <a href="{{ network.url }}" class="btn btn-lg btn-pill btn-icon btn-outline-primary mx-1" style="line-height:1">
+                <span class="icon-{{ network.icon }}"></span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<?php //%255BApp%255CController%255CDashboardNewsletterController%2523newsletter_subs_download%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/dashboard/newsletter/subscribe/download',
+            ],
+            'name' => [
+                'dashboard_news_subs_download',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

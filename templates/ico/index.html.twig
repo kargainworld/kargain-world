@@ -1,0 +1,20 @@
+{% set meta = {
+  title:  'page.ico.meta.title'|trans,
+  desc:   'page.ico.meta.description'|trans,
+  robots: 'index, follow'
+} %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <div class="app-section">
+    <h1 class="display-4 text-center">{{ meta.title }}</h1>
+    <div class="py-5">
+      <div class="alert alert-warning text-center w-75 mx-auto mb-5">
+        {{ 'page.ico.message'|trans }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

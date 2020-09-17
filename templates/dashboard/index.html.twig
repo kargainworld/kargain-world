@@ -1,0 +1,110 @@
+{% extends 'dashboard/base.html.twig' %}
+
+{% block body %}
+<div class="container">
+{% if subscribes is defined and subscribes is not empty %}
+  <div class="row mb-3">
+    <div class="col">
+      <h3>Liste des utilisateur&middot;rice&middot;s inscrit&middot;e&middot;s à la newsletter</h3>
+    </div>
+    <div class="col-12 col-md-auto">
+      <a href="{{ path('dashboard_news_subs_download') }}" class="btn btn-primary">
+        Télécharger les emails
+      </a>
+    </div>
+  </div>
+
+  <div class="table-responsive table-bordered">
+    <table class="table table-striped mb-0">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th>Email</th>
+          <th class="text-center">Date</th>
+          <th class="text-center"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for sub in subscribes %}
+          <tr>
+            <td class="align-middle text-center" style="width: 3rem">{{ sub.id }}</td>
+            <td class="align-middle">{{ sub.email }}</td>
+            <td class="align-middle text-center" style="width: 7rem">{{ sub.dateSubscribe|date('Y-m-d') }}</td>
+            <td class="align-middle text-center" style="width: 6rem">
+              <a href="{{ path('dashboard_news_subs_delete', { email: sub.email }) }}"
+                class="btn btn-sm btn-danger">
+                Suppr.
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-4">
+    {# Newsletter subscribes pagination #}
+    {% if nb_pages > 1 %}
+      <nav class="mb-0" aria-label="Navigation par numéro de page d'utilisateur">
+        <ul class="pagination justify-content-center mb-0">
+          {# Previous button #}
+          {% if current_page > 1 %}
+          <li class="page-item">
+            <a class="page-link" aria-label="Précédent" href="{{ path('dashboard', { current_page: (current_page - 1) }) }}">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Précédent</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <span class="page-link">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Précédent</span>
+            </span>
+          </li>
+          {% endif %}
+
+          {# Loop to generate numbers pages #}
+          {% for num_page in 1..nb_pages %}
+            {% if num_page == current_page %}
+            <li class="page-item active">
+              <span class="page-link">{{ num_page }}</span>
+            </li>
+            {% else %}
+            <li class="page-item">
+              <a class="page-link" href="{{ path('dashboard', { current_page: num_page }) }}">
+                {{ num_page }}
+              </a>
+            </li>
+            {% endif %}
+          {% endfor %}
+
+          {# Next button #}
+          {% if current_page < nb_pages %}
+          <li class="page-item">
+            <a class="page-link" aria-label="Suivant" href="{{ path('dashboard', { current_page: (current_page + 1) }) }}">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Suivant</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <span class="page-link">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Suivant</span>
+            </span>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    <div class="mt-1 small text-muted text-center">
+      {{ nb_subscribes }} inscription{% if nb_subscribes > 1 %}s{% endif %} à la newsletter.
+    </div>
+  </div>
+{% else %}
+  <div class="alert alert-dark">Aucune inscription à la newsletter, pour l'instant.</div>
+{% endif %}
+</div>
+{% endblock %}

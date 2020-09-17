@@ -1,0 +1,16 @@
+<div class="app-section app-section--subscribe container">
+  <h4 class="-title h3">{{ 'section.newsletter.title'|trans|raw }}</h4>
+
+  <form class="-form -form--newsletter-subscribe" action="{{ path('newsletter_subscribe') }}" method="post">
+    <div class="input-group input-group-lg input-group-pill">
+      <input type="email" class="form-control bg-transparent" name="subscribe-email" placeholder="{{ 'section.newsletter.input.label'|trans }}"
+        aria-label="{{ 'section.newsletter.input.label'|trans }}" aria-describedby="button-addon2" required="required">
+      <div class="input-group-append">
+        <button class="btn btn-gradient-primary btn-big-icon btn-big-icon--right" type="submit" id="button-addon2">
+          {{ 'section.newsletter.btn.label'|trans }}
+          <span class="icon icon-arrow-right"></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

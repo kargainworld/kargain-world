@@ -1,0 +1,56 @@
+{% set meta = {
+  title:  'page.team.meta.title'|trans,
+  desc:   'page.team.meta.description'|trans,
+  robots: 'index, follow'
+} %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <div class="app-section">
+    <h2 class="display-4 text-center">{{ 'page.team.intro.title'|trans }}</h2>
+    {% if team is defined and team is not empty %}
+      <ul class="list-team row align-items-stretch">
+      {% for member in team %}
+        <li class="-item col-12 col-sm-6 col-md-4">
+          <div class="-avatar">
+            <img src="{{ member.avatar }}" class="img-fluid w-100">
+          </div>
+          <div class="-content">
+            <h3 class="-name -lastname">{{ member.lastname }}</h3>
+            <h4 class="-name -firstname">{{ member.firstname }}</h4>
+
+            <hr class="mini -separator">
+
+            <div class="-job">{{ member.job[app.request.attributes.get('_locale')] }}</div>
+          </div>
+        </li>
+      {% endfor %}
+      </ul>
+    {% else %}
+    <div class="alert alert-dark text-center w-75 mx-auto">
+      {{ 'page.team.list_team.empty'|trans }}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="app-section">
+    <h2 class="display-4 text-center">{{ 'page.team.list_partners.title'|trans }}</h2>
+    {% if partners is defined and partners is not empty %}
+      <ul class="list-partners row justify-content-center">
+      {% for partner in partners %}
+        <li class="-item col-6 col-md-3">
+          <h3 class="-name">{{ partner.name }}</h3>
+          <img src="{{ partner.logo }}" alt="{{ partner.name }}" class="-logo">
+        </li>
+      {% endfor %}
+      </ul>
+    {% else %}
+    <div class="alert alert-dark text-center w-75 mx-auto">
+      {{ 'page.team.list_partners.empty'|trans }}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

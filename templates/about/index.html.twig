@@ -1,0 +1,74 @@
+{# {% set meta = {
+  title:  'page.about.meta.title'|trans,
+  desc:   'page.about.meta.description'|trans,
+  robots: 'index, follow'
+} %} #}
+{% set meta = {
+  desc: 'page.about.meta.description'|trans,
+  robots: 'index, follow'
+} %}
+
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="panel panel--planet-landscape">
+  <div class="-inner container">
+    <h1 class="display-1 text-primary text-center mb-4">{{ 'page.about.intro.title'|trans }}</h1>
+    <p class="text-introduction text-center mx-auto pt-2">{{ 'page.about.intro.text'|trans }}</p>
+  </div>
+</div>
+
+<div class="panel panel--jumbotron panel--white-paper bg-gradient-primary text-white">
+  <div class="-inner container p-0">
+    <h3 class="-title h1">{{ 'page.about.whitepaper.title'|trans }}</h3>
+    <p class="-text">{{ 'page.about.whitepaper.text'|trans }}</p>
+    <div class="-actions">
+      <a class="btn btn-xl btn-pill btn-outline-light btn-big-icon btn-big-icon--right"
+        href="/build/files/whitepaper.pdf" target="_blank">
+        {{ 'page.about.whitepaper.btn.label'|trans }}
+        <span class="icon icon-arrow-right"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% include 'components/text-and-image.html.twig' with {
+  slug  : 'about-blockchain',
+  title : 'page.about.blockchain.title'|trans,
+  text  : 'page.about.blockchain.block_1.text'|trans,
+  list  : {
+    item_1 : {
+      icon: 'lock',
+      text: 'page.about.blockchain.block_1.list.item_1.text'|trans
+    },
+    item_2 : {
+      icon: 'steering-wheel',
+      text: 'page.about.blockchain.block_1.list.item_2.text'|trans
+    },
+    item_3 : {
+      icon: 'chart-up',
+      text: 'page.about.blockchain.block_1.list.item_3.text'|trans
+    },
+  },
+  img   : {
+    position  : 'right',
+    source    : '/build/images/about/plateform-block-1-img.png'
+  }
+} %}
+
+{% include 'components/text-and-image.html.twig' with {
+  text  : 'page.about.blockchain.block_2.text'|trans,
+  img   : {
+    position  : 'left',
+    source    : '/build/images/about/plateform-block-2-img.png'
+  },
+  actions: {
+    btn_1 : {
+      link:   '/build/files/whitepaper.pdf',
+      label:  'page.about.blockchain.block_2.btn.label'|trans,
+      target: '_blank'
+    }
+  }
+} %}
+{% endblock %}

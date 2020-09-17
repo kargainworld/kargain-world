@@ -1,0 +1,63 @@
+<?php //%255Bbe9b187220bd67998dd2391836b12efa%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT n0_.id AS id_0, n0_.email AS email_1, n0_.date_subscribe AS date_subscribe_2, n0_.is_active AS is_active_3 FROM newsletter_subscribe n0_ LIMIT 25',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'sub' => 'App\\Entity\\NewsletterSubscribe',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'email_1' => 'email',
+                    'date_subscribe_2' => 'date_subscribe',
+                    'is_active_3' => 'isActive',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'sub' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'sub',
+                    'email_1' => 'sub',
+                    'date_subscribe_2' => 'sub',
+                    'is_active_3' => 'sub',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\NewsletterSubscribe',
+                    'email_1' => 'App\\Entity\\NewsletterSubscribe',
+                    'date_subscribe_2' => 'App\\Entity\\NewsletterSubscribe',
+                    'is_active_3' => 'App\\Entity\\NewsletterSubscribe',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

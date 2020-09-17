@@ -1,0 +1,52 @@
+{% set meta = {
+  title:  'page.terms_service.meta.title'|trans,
+  desc:   'page.terms_service.meta.description'|trans,
+  robots: 'index, follow'
+} %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <div class="app-section">
+    <h2 class="display-4 text-center">{{ 'page.terms_service.title'|trans }}</h2>
+    <div class="text-contextual">
+      <div class="text-muted text-center mb-4">{{ 'page.terms_service.last_update'|trans }}</div>
+
+      <div class="mb-4">
+        {{ 'page.terms_service.intro'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.terms_service.access_to_site.title'|trans }}</h3>
+        {{ 'page.terms_service.access_to_site.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.terms_service.indemnification.title'|trans }}</h3>
+        {{ 'page.terms_service.indemnification.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.terms_service.third_party.title'|trans }}</h3>
+        {{ 'page.terms_service.third_party.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.terms_service.disclaimers.title'|trans }}</h3>
+        {{ 'page.terms_service.disclaimers.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.terms_service.liability_limit.title'|trans }}</h3>
+        {{ 'page.terms_service.liability_limit.text'|trans|raw }}
+      </div>
+
+      <div>
+        <h3 class="h6">{{ 'page.terms_service.general.title'|trans }}</h3>
+        {{ 'page.terms_service.general.text'|trans|raw }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        contact_email: '%contact_email%'
+        social_networks: '%social_networks%'
+        google_analytics_key: '%google_analytics_key%'

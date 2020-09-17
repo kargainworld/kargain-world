@@ -1,0 +1,51 @@
+{% set meta = {
+  title:  'page.privacy_policy.meta.title'|trans,
+  desc:   'page.privacy_policy.meta.description'|trans,
+  robots: 'index, follow'
+} %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <div class="app-section">
+    <h2 class="display-4 text-center">{{ 'page.privacy_policy.title'|trans }}</h2>
+    <div class="text-contextual">
+      <div class="text-muted text-center mb-4">{{ 'page.privacy_policy.last_update'|trans }}</div>
+
+      <div class="mb-4">
+        {{ 'page.privacy_policy.intro'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.privacy_policy.what_collect.title'|trans }}</h3>
+        {{ 'page.privacy_policy.what_collect.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.privacy_policy.use_personal_info.title'|trans }}</h3>
+        {{ 'page.privacy_policy.use_personal_info.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.privacy_policy.sharing_personal_info.title'|trans }}</h3>
+        {{ 'page.privacy_policy.sharing_personal_info.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.privacy_policy.info_choices_changes.title'|trans }}</h3>
+        {{ 'page.privacy_policy.info_choices_changes.text'|trans|raw }}
+      </div>
+
+      <div class="mb-4">
+        <h3 class="h6">{{ 'page.privacy_policy.contact.title'|trans }}</h3>
+        {{ 'page.privacy_policy.contact.text'|trans|raw }}
+      </div>
+
+      <div>
+        {{ 'page.privacy_policy.changes_to_policy.text'|trans|raw }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

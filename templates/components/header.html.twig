@@ -1,0 +1,52 @@
+{% set size_display_menu = 'md' %}
+
+<div class="app-header">
+  <nav class="navbar navbar-light navbar-expand-{{ size_display_menu }} py-lg-4">
+    <div class="container py-lg-1">
+      <a class="navbar-brand" href="{{ path('about') }}">
+        {% include 'components/logo.html.twig' %}
+      </a>
+
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse order-{{ size_display_menu }}-1" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          {#<li class="nav-item d-block d-{{ size_display_menu }}-none">
+            {% include 'components/logo.html.twig' with { custom_class : 'text-primary' } %}
+          </li>#}
+          {% for menu_slug in [ 'about', 'team', 'product' ] %}
+            <li class="nav-item{% if app.request.attributes.get('_route') == menu_slug %} active{% endif %}">
+              <a class="nav-link px-2 ml-md-2 ml-lg-4 ml-xl-5" href="{{ path(menu_slug) }}">
+                {{ ('menu.' ~ menu_slug ~ '.label')|trans }}
+                {% if app.request.attributes.get('_route') == menu_slug %} <span class="sr-only">(current)</span>{% endif %}
+              </a>
+            </li>
+          {% endfor %}
+          <li class="nav-item">
+            <a class="nav-link px-2 ml-md-2 ml-lg-4 ml-xl-5"
+              href="/build/files/whitepaper.pdf" target="_blank">
+              Whitepaper
+            </a>
+          </li>
+          <li class="nav-divider d-md-none">
+            <hr>
+          </li>
+          {% set current_url_slug = app.request.attributes.get('_route') %}
+          {% set current_url_path = path(current_url_slug) %}
+
+          {% for lang in [ 'en', 'fr' ] %}
+            {% set url_path = path(current_url_slug, { '_locale': lang }) %}
+            <li class="nav-item{% if loop.first %} ml-md-2 ml-lg-4 ml-xl-5{% endif %}{% if url_path == current_url_path %} active{% endif %}">
+              {% if loop.first == false %}<span class="d-none d-md-inline">&nbsp|</span>{% endif %}
+              <a class="nav-link px-2 px-md-0 py-1 py-md-2 d-inline-block" href="{{ url_path }}">
+                {{ lang|upper }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

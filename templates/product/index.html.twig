@@ -1,0 +1,81 @@
+{% set meta = {
+  title:  'page.product.meta.title'|trans,
+  desc:   'page.product.meta.description'|trans,
+  robots: 'index, follow'
+} %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <div class="app-section">
+    <h2 class="display-4 text-center mb-0">{{ 'page.product.website.section_title'|trans }}</h2>
+    {% include 'components/text-and-image.html.twig' with {
+      slug            : 'product-website',
+      title           : 'page.product.website.title'|trans,
+      title_in_panel  : true,
+      text            : 'page.product.website.text'|trans,
+      img             : {
+        position  : 'left',
+        source    : '/build/images/product/product-block-1-img.png'
+      }
+    } %}
+
+    <h2 class="display-4 text-center mb-0">{{ 'page.product.mobile_app.section_title'|trans }}</h2>
+    {% include 'components/text-and-image.html.twig' with {
+      slug            : 'product-mobile-app',
+      section_class   : 'pb-0',
+      title           : 'page.product.mobile_app.title'|trans,
+      title_in_panel  : true,
+      text            : 'page.product.mobile_app.text'|trans,
+      img             : {
+        position  : 'right',
+        source    : '/build/images/product/product-block-2-img.png'
+      }
+    } %}
+  </div>
+</div>
+
+<div class="app-section app-section--product-features bg-gradient-primary-reverse text-white">
+  <div class="container">
+    <h2 class="display-4 text-white text-center">{{ 'page.product.features.title'|trans }}</h2>
+    {% if features is defined and features is not empty %}
+      <ul class="list-icons">
+        {% for feat in features %}
+          <li class="-item row align-items-center{% if loop.last == false %} pb-2 mb-3 mb-md-4{% endif %}">
+            <div class="-icon col-auto col-md-3 col-lg-5 text-center">
+              <span class="icon-{{ feat.icon }}"></span>
+            </div>
+            <div class="-text col">
+              <h3 class="mb-0">{{ feat.title[app.request.attributes.get('_locale')] }}</h3>
+              <p class="mb-0">{{ feat.text[app.request.attributes.get('_locale')] }}</p>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+    <div class="alert alert-dark text-center w-75 mx-auto">
+      {{ 'page.product.features.empty'|trans }}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="app-section app-section--milestones container pb-0">
+  <h2 class="display-4 text-center">{{ 'page.product.milestones.title'|trans }}</h2>
+  {% if milestones is defined and milestones is not empty %}
+    <ul class="list-timeline">
+      {% for ms in milestones %}
+        <li class="-item{% if ms.is_old is defined and ms.is_old == true %} -item-old{% endif %}">
+          <div class="-date">{{ ms.date[app.request.attributes.get('_locale')] }}</div>
+          <div class="-text">{{ (ms.text[app.request.attributes.get('_locale')])|raw }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+  <div class="alert alert-dark text-center w-75 mx-auto">
+    {{ 'page.product.milestones.empty'|trans }}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
