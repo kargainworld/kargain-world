@@ -13,19 +13,19 @@
     {% if team is defined and team is not empty %}
       <ul class="list-team row align-items-stretch">
       {% for member in team %}
-        <li class="-item col-12 col-sm-6 col-md-4">
-          <div class="-avatar">
-            <img src="{{ member.avatar }}" class="img-fluid w-100">
-          </div>
-          <div class="-content">
-            <h3 class="-name -lastname">{{ member.lastname }}</h3>
-            <h4 class="-name -firstname">{{ member.firstname }}</h4>
+	<li class="-item col-12 col-sm-6 col-md-4">
+	    <div href="{{ member.url }}" class="-avatar">
+	    <img src="{{ member.avatar }}" class="img-fluid w-100">
+	  </div>
+	  <div class="-content">
+	    <h3 class="-name -lastname">{{ member.lastname }}</h3>
+	    <h4 class="-name -firstname">{{ member.firstname }}</h4>
 
-            <hr class="mini -separator">
+	    <hr class="mini -separator">
 
-            <div class="-job">{{ member.job[app.request.attributes.get('_locale')] }}</div>
-          </div>
-        </li>
+	    <div class="-job">{{ member.job[app.request.attributes.get('_locale')] }}</div>
+	  </div>
+	</li>
       {% endfor %}
       </ul>
     {% else %}
@@ -40,10 +40,10 @@
     {% if partners is defined and partners is not empty %}
       <ul class="list-partners row justify-content-center">
       {% for partner in partners %}
-        <li class="-item col-6 col-md-3">
-          <h3 class="-name">{{ partner.name }}</h3>
-          <img src="{{ partner.logo }}" alt="{{ partner.name }}" class="-logo">
-        </li>
+	<li class="-item col-6 col-md-3">
+	  <h3 class="-name">{{ partner.name }}</h3>
+	  <img src="{{ partner.logo }}" alt="{{ partner.name }}" class="-logo">
+	</li>
       {% endfor %}
       </ul>
     {% else %}

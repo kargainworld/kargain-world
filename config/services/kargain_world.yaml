@@ -17,9 +17,9 @@ parameters:
       ##  fling:
       ##    icon: 'plane'
       ##    url:  '#fling'
-        github:
-          icon: 'github'
-          url:  'https://github.com/kargainworld'
+      ##  github:
+      ##    icon: 'github'
+      ##    url:  'https://github.com/kargainworld'
         reddit:
           icon: 'reddit'
           url:  '#reddit'
@@ -28,6 +28,7 @@ parameters:
             lastname:   "Kargain World"
             firstname:  "GitHub"
             avatar:     "/build/images/avatars/github.png"
+            url:  'https://github.com/kargainworld'
             job:
               en: "{ClaN}"
               fr: "{ClaN}"
