@@ -17,59 +17,42 @@ parameters:
       ##  fling:
       ##    icon: 'plane'
       ##    url:  '#fling'
+        github:
+          icon: 'github'
+          url:  'https://github.com/kargainworld'
         reddit:
           icon: 'reddit'
           url:  '#reddit'
     team:
         member_1:
-            lastname:   "Daniil"
-            firstname:  "Gorbatenko"
-            avatar:     "/build/images/avatars/daniil-gorbatenko.png"
+            lastname:   "Kargain World"
+            firstname:  "GitHub"
+            avatar:     "/build/images/avatars/github.png"
             job:
-              en: "CO-Founder"
-              fr: "CO-Fondateur"
-        # member_2:
-        #     lastname:   "Georgy"
-        #     firstname:  "Usachev"
-        #     avatar:     "/build/images/avatars/georgy-usachev.png"
-        #     job:
-        #       en: "Founder"
-        #       fr: "Fondateur"
-        member_3:
-            lastname:   "Nicolas"
-            firstname:  "Richard"
-            avatar:     "/build/images/avatars/nicolas-richard.png"
-            job:
-              en: "CO-Founder"
-              fr: "CO-Fondateur"
-    ## member_1:
-    ##     lastname:   "Martha"
-    ##     firstname:  "Kane"
-    ##     avatar:     "/build/images/avatars/martha-kane.png"
-    ##     job:
-    ##       en: "Founder (CEO)"
-    ##       fr: "Fondatrice (CEO)"
-    ## member_2:
-    ##     lastname:   "Bruce"
-    ##     firstname:  "Wayne"
-    ##     avatar:     "/build/images/avatars/bruce-wayne.png"
-    ##     job:
-    ##       en: "Co-Founder (CEO)"
-    ##       fr: "Co-Fondateur (CEO)"
-    ## member_3:
-    ##     lastname:   "Doe"
-    ##     firstname:  "John"
-    ##     avatar:     "/build/images/avatars/john-doe.png"
-    ##     job:
-    ##       en: "Chief Technology Officer (CTO)"
-    ##       fr: "Directeur de la technologie (CTO)"
-        member_4:
-            lastname:   "Nicolas"
-            firstname:  "Giraudo"
-            avatar:     "/build/images/avatars/nicolas-giraudo.png"
-            job:
-              en: "Developer"
-              fr: "Développeur"
+              en: "{ClaN}"
+              fr: "{ClaN}"
+
+        ## member_1:
+        ##     lastname:   "Martha"
+        ##     firstname:  "Kane"
+        ##     avatar:     "/build/images/avatars/martha-kane.png"
+        ##     job:
+        ##       en: "Founder (CEO)"
+        ##       fr: "Fondatrice (CEO)"
+        ## member_2:
+        ##     lastname:   "Bruce"
+        ##     firstname:  "Wayne"
+        ##     avatar:     "/build/images/avatars/bruce-wayne.png"
+        ##     job:
+        ##       en: "Co-Founder (CEO)"
+        ##       fr: "Co-Fondateur (CEO)"
+        ## member_3:
+        ##     lastname:   "Doe"
+        ##     firstname:  "John"
+        ##     avatar:     "/build/images/avatars/john-doe.png"
+        ##     job:
+        ##       en: "Chief Technology Officer (CTO)"
+        ##       fr: "Directeur de la technologie (CTO)"
         ## member_4:
         ##    lastname:   "Roth"
         ##    firstname:  "Raven"
@@ -137,26 +120,26 @@ parameters:
     milestones:
         item_1:
             date:
-              en: "July 2020"
-              fr: "Juillet 2020"
+              en: "October 2020"
+              fr: "Octobre 2020"
             text:
-              en: "Development Alpha Karspace."
-              fr: "Développement Alpha Karspace."
+              en: "Development Kargain."
+              fr: "Développement Kargain."
         item_2:
             date:
-              en: "June 2020"
-              fr: "Juin 2020"
+              en: "September 2020"
+              fr: "Septembre 2020"
             text:
-              en: "Kargain web application launch."
-              fr: "Lancement application web Kargain."
+              en: "Development Kargain."
+              fr: "Développement Kargain."
         item_3:
             is_old: true
             date:
               en: "April 2020"
               fr: "Avril 2019"
             text:
-              en: "Project launch."
-              fr: "Lancement du projet."
+              en: "Development Kargain."
+              fr: "Développement Kargain."
 
 # services:
 #     # ... some services
