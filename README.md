@@ -1,4 +1,7 @@
 ![Discord](https://img.shields.io/discord/757632394504175736?color=%236ba9ee&label=%23kargain-world&logo=discord&style=flat-square)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://kargain.world"><img alt="kargain.world logo" src="./logo/LOGO_KARGAINWORLD.png" alt="kargain.com" width="400"></a></p>
